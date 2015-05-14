@@ -2,4 +2,4 @@
 *.class
   
 #过滤文件夹test,bin
-target/
+#target/
