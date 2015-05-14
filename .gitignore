@@ -1,0 +1,5 @@
+#过滤class文件
+*.class
+  
+#过滤文件夹test,bin
+target/
