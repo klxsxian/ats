@@ -192,6 +192,13 @@ public class PubFunc {
 		return false;
 	}
 	
+	public static boolean isEmpty(Object obj){
+		if(obj == null){
+			return true;
+		}
+		return false;
+	}
+	
 	public static List<String[]> toArray(String str,String sep,String subSep){
 		String[] strs = toArray(str,sep);
 		if(strs == null){
