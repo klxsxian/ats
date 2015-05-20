@@ -1,0 +1,24 @@
+http://blog.csdn.net/leon_7mx/article/details/6261282
+
+Java中通过Socket实现客户端与服务器端的通信，大概步骤如下：
+1）服务端创建ServerSocket，绑定服务器地址及端口并开始监听；
+2）客户端建立socket连接，创建Socket对象，该Socket对象通过GetInputStream从主机读取信息，通过OutputStream向主机发送请求
+3）服务端收到客户端的请求后，通过ServerSocket的accept方法创建Socket对象，该Socket对象通过GetInputStream读取客户端请求，
+通过OutputStream向客户端发送信息
+
+java -cp .;c:\dir1\lib.jar Test
+-cp 和 -classpath 一样，是指定类运行所依赖其他类的路径，通常是类库，jar包之类，需要全路径到jar包，window上分号“;”
+分隔，linux上是分号“:”分隔。不支持通配符，需要列出所有jar包，用一点“.”代表当前路径。
+
+使用范例：
+java -cp ..\lib\hsqldb.jar org.hsqldb.Server -database mydb 
+或 
+java -cp ../lib/hsqldb.jar org.hsqldb.Server -database.0 mydb -dbname.0 mydb
+
+
+如果想要通配符的效果，可以使用
+java -Djava.ext.dirs=...
+其中...是目录名 
+
+循序渐进Java Socket网络编程（多客户端、信息共享、文件传输）
+http://my.oschina.net/leejun2005/blog/104955
